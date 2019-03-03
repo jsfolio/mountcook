@@ -1,0 +1,73 @@
+@media (min-width:481px) and (max-width:767px){
+    
+  
+    .ham_box{
+        display: block;
+    }
+    .main_search_box{
+        display: none;
+    }
+    header{
+        position: fixed;
+        top:0;
+        width:100%;
+        height:100px;
+        background:linear-gradient(132deg,#175f87,#156994 );
+
+    }
+    nav{
+        
+        width:100%;
+        height:100%;
+       
+        box-sizing: border-box;
+        text-align: center;
+        padding:0 50px 0;
+        
+        border-bottom:1px solid #ccc;
+        box-sizing: border-box;
+    }
+    nav ul li a::after{
+        display: none;
+    }
+    nav ul li{
+        font-size:25px;
+        margin-right: 0;
+    }
+    nav > ul{
+        margin-left:0;
+    }
+    .logo{
+        width:90px;
+    }
+
+    .show{
+        left:50%;
+    }
+    .hide{
+        left:100%;
+    }
+    .bottom{
+        height:70px;
+        background: #fff;
+        border-top:1px solid #eaeaea;
+        padding:0 5px 0;
+    }
+    .bottom > ul{
+        float:none;
+        width:200px;
+        margin:0 auto;
+    }
+    .twitter{
+        background:url('img/twitter.png')no-repeat center;
+    }
+    .facebook{
+        background:url('img/facebook.png')no-repeat center;
+    }
+    .insta{
+        background:url('img/insta.png')no-repeat center;
+    }
+    .bottom p{
+        display:none;
+    }
+}

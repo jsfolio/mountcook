@@ -1,0 +1,12 @@
+.logo{
+    width:100px;
+}
+nav{
+    padding:0 28px 0;
+}
+nav > ul{
+    margin-left:0;
+}
+nav > ul > li{
+    margin-right:40px;
+}

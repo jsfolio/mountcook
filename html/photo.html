@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="ham_css.css">
+    <link rel="stylesheet" href="mini_menu.css">
+    <link rel="stylesheet" href="page_css.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script src="js/mobile_menu.js"></script>
+    <link rel="stylesheet" media="(max-width:480px)" href="width480.css" />
+    <link rel="stylesheet" media="(min-width:481px) and (max-width:767px)" href="width481_767.css" />
+    <link rel="stylesheet" media="(min-width:768px) and (max-width:1199px)" href="width768_1199.css" />
+    <link rel="stylesheet" media="(min-width:1200px) and (max-width:1599px)" href="width1200_1599.css" />
+    <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <title>Photography</title>
+    <style>
+       
+    
+        nav ul li:nth-child(3) a::after{
+            left:0%;
+            width:100%;
+        }
+        nav ul li:nth-child(3) a{
+            font-weight: bold;
+        }
+        
+        .con_wrap{
+            width:100%;
+            height: calc(100vh - 200px);
+            max-width: 1600px;
+             
+            margin:0 auto;
+            padding:50px;  
+            box-sizing: border-box;
+            transition:all .3s;
+        }
+        .img_wrap{
+
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .img_wrap ul{
+            height:100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .img_wrap ul li{
+            list-style: none;
+            width:calc(100% / 5) ;
+            height:306px;
+            float: left;
+
+            margin-bottom:20px;
+
+            overflow: hidden;
+            transition:all .3s;
+            position: relative;
+        }
+        .img_sec{
+            cursor: pointer;
+        }
+   
+        .img_name{
+            width:100%;
+            height:40%;
+            position: absolute;
+            bottom:0;
+            padding:10px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .name_1{
+            width:100%;
+            height:50%;
+            color:#fff;
+            cursor: pointer;
+        }
+       .sub{
+           width:100%;
+           height:50%;
+           border-top:1px solid #fff;
+           padding:20px 10px 20px 10px;
+           box-sizing: border-box;
+        }
+        .view{
+            width:50%;
+            height: 100%;
+            float: left;
+        }
+        .icon{
+            float: left;
+            margin: 0 10px 0 10px;
+        }
+ 
+
+        .view span {
+            float: left;
+            color:#fff;
+        }
+        
+        /* 
+        
+        min1600-max1920
+        min1200~max1599
+        min768-max1199
+        max767
+    
+        */
+        
+        @media (min-width:1200px) and (max-width:1599px){
+            .img_wrap ul li{
+                width:25%;              
+            }
+
+        }
+        @media (min-width:768px) and (max-width:1199px){
+           
+            .img_wrap ul li{
+                width:calc(100% / 3);
+                
+            }
+
+            .info_sec{
+                width:70%;
+            }
+           
+            
+        }
+        @media (min-width:481px) and (max-width:767px){
+           
+            .con_wrap{
+                padding:10px;
+                background:#fff;
+                height:auto;
+                margin-top:100px;
+            }
+    
+            .img_wrap ul li{
+                width:50% ;    
+            }
+            .sub{
+                padding:0;
+            }
+            .sub_2{
+                width:60%;
+            }
+            .view{
+                line-height: 16px;
+            }
+            .icon{
+                display: block;
+                float:none;
+                margin:0;
+                padding-top:5px;
+            }
+            .view span{
+                float: none;
+            }
+            nav ul li:nth-child(3) a{
+                color:#fff;
+            
+            }
+            nav ul li:nth-child(1) a,
+            nav ul li:nth-child(2) a,
+            nav ul li:nth-child(4) a{
+                display: none;
+            }
+            
+        
+        }
+        @media (max-width:480px){
+          
+            .con_wrap{
+                padding:20px 5px 0 5px;
+                background:#fff;
+                height:auto;
+                margin-top:100px;
+            }
+
+            .img_wrap ul li{
+                width:100% ;
+                
+                float:none;
+            }
+            .sub{
+                padding:0;
+            }
+            .sub_2{
+                width:60%;
+            }
+            .view{
+                line-height: 16px;
+            }
+            .icon{
+                display: block;
+                float:none;
+                margin:0;
+                padding-top:5px;
+            }
+            .view span{
+                float: none;
+            }
+           
+            nav ul li:nth-child(3) a{
+                color:#fff;
+            
+            }
+            nav ul li:nth-child(1) a,
+            nav ul li:nth-child(2) a,
+            nav ul li:nth-child(4) a{
+                display: none;
+            }
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <nav>  
+                <a href="index.html"><div class="logo"></div></a>
+                <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutme.html">About</a></li>
+                        <li><a href="photo.html">Photography</a></li>
+                        <li><a href="contact.html">Contact</a></li>             
+                </ul>
+                <div class="main_search_box">   
+                        <div class="main_icon"></div>
+                        <input type="search" class="main_search" placeholder="search">
+                    </div>
+                    <div class="ham_box"> 
+                    <div class="menu_box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="mobile_menu">
+                <ul>
+                    <li><a href="#"><div class="search_box">   
+                            <div class="icon"></div>
+                            <input type="search" placeholder="search">
+                       </div></a></li>
+                    <li><a href="index.html">
+                        <img src="img/icon_home.png" class="icon_sec" alt="">
+                        <p>Home</p></a></li>
+                    <li><a href="aboutme.html">
+                        <img src="img/icon_profile.png" class="icon_sec" alt="">
+                        <p>About</p></a></li>
+                    <li><a href="photo.html">
+                        <img src="img/icon_camera.png" class="icon_sec" alt="">
+                        <p>Photography</p></a></li>
+                    <li><a href="contact.html">
+                        <img src="img/icon_contact.png" class="icon_sec" alt="">
+                        <p>Contact</p></a></li>
+                </ul>
+                
+        </div>
+        <div class="panel-overlay"></div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content2">
+                <span class="modalclose">&times;</span>
+
+                <div class="photo_sec"></div>
+
+                <div class="photo_info">      
+                    <div class="name_2"></div>
+                    <div class="sub_2">
+                        <div class="view_modal">
+                            <div class="icon_modal"><img src="img/icon_view.png" alt=""></div>
+                                <span></span>                                   
+                        </div>   
+                        <div class="view_modal">
+                            <div class="icon_modal"><img src="img/icon_heart.png" alt=""> </div>
+                            <span></span>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="con_wrap">
+           <div class="img_wrap">
+               <ul>
+                   <li>
+                       <div class="img_sec">
+                           <img src="img/photo_1.jpg" alt="">
+                       </div>
+                       <div class="img_name">
+                           
+                           <div class="name_1">Line Biz Awards</div>
+                           <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>5,912</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>2,354</span>
+                                </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="img_sec">
+                           <img src="img/photo_2.jpg" alt="">
+                       </div>
+                       <div class="img_name">
+                           
+                           <div class="name_1">RIMOWA x Onesal</div>
+                           <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>3,542</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>8,327</span>
+                                </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="img_sec">
+                           <img src="img/photo_3.jpg" alt="">
+                       </div>
+                       <div class="img_name">
+                           
+                           <div class="name_1">Discovery Japan Idents and Filler</div>
+                           <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>4,357</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>1,664</span>
+                                </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="img_sec">
+                           <img src="img/photo_4.jpg" alt="">
+                       </div>
+                       <div class="img_name">
+                           
+                           <div class="name_1">At the Beginning of Everything</div>
+                           <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>6,725</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>3,942</span>
+                                </div>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="img_sec">
+                           <img src="img/photo_5.jpg" alt="">
+                       </div>
+                       <div class="img_name">
+                           
+                           <div class="name_1">Nuages de Papier</div>
+                           <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>2,985</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>1,354</span>
+                                </div>
+                           </div>
+                       </div>
+                   </li>
+          
+                    <li>
+                        <div class="img_sec">
+                            <img src="img/photo_6.jpg" alt="">
+                        </div>
+                        <div class="img_name">
+                            
+                            <div class="name_1">Rugby Top League 2018</div>
+                            <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>5,048</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>2,642</span>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_sec">
+                            <img src="img/photo_7.jpg" alt="">
+                        </div>
+                        <div class="img_name">
+                            
+                            <div class="name_1">Giro d'Italia</div>
+                            <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>4,773</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>2,345</span>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_sec">
+                            <img src="img/photo_8.jpg" alt="">
+                        </div>
+                        <div class="img_name">
+                            
+                            <div class="name_1">Infinite Futures</div>
+                            <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>5,113</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>2,354</span>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_sec">
+                            <img src="img/photo_9.jpg" alt="">
+                        </div>
+                        <div class="img_name">
+                           <div class="name_1">Premier League & Bundesliga Promo Package</div>
+                            
+                            <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>7,224</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>3,355</span>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_sec">
+                            <img src="img/photo_10.jpg" alt="">
+                        </div>
+                        <div class="img_name">
+                            
+                            <div class="name_1">Le Mans</div>
+                            <div class="sub">
+                               <div class="view">
+                                   <div class="icon"><img src="img/icon_view_white.png" alt=""></div>
+                                     <span>8,765</span>                                   
+                                </div>   
+                                <div class="view">
+                                   <div class="icon"><img src="img/icon_heart_white.png" alt=""> </div>
+                                   <span>3,442</span>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Social Links</p>
+            <ul>           
+                <li><a href="#"><div class="twitter sns"></div></a></li>
+                <li><a href="#"><div class="facebook sns"></div></a></li>
+                <li><a href="#"><div class="insta sns"></div></a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $('.img_sec').click(function(){ 
+            scroll_block();
+            $('.modal').show();
+            $('.name_2').text($(this).siblings('.img_name').children('.name_1').text()) ;
+            $('.view_modal').eq(0).children('span').text($(this).siblings('.img_name').find('span').eq(0).text());
+            $('.view_modal').eq(1).children('span').text($(this).siblings('.img_name').find('span').eq(1).text());
+            
+            var imgsrc = "";
+            imgsrc = $(this).children('img').attr('src');
+            $('.photo_sec').css({
+                background: " url(' " + imgsrc + "')",
+                backgroundSize: 'cover'
+            })
+            
+            
+        });
+        
+        $('.modalclose, .modal').click(function(e){
+            $('.modal').css({
+                display: "none"
+            });
+            scroll_on();
+        });
+     
+        $('.modal-content2').click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+
+        function scroll_block(){
+            $('body').on('scroll touchmove mousewheel', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            });
+        };
+        function scroll_on(){
+            $('body').off('scroll touchmove mousewheel');
+        };
+    
+    });
+    </script>
+</body>
+</html>
