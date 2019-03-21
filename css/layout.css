@@ -1,49 +1,37 @@
-    *{
-    margin:0; padding:0;
-    font-family: 'Nanum Gothic', sans-serif;
-    }
 
-    button,input{outline:none;}
     body{
-            width:100%;
-            height:100vh;
-            background:url('img/index_background.png') no-repeat center/ cover;
-            background-attachment: fixed;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
+        height:100vh;
+        background:url('../img/index_background.png') no-repeat center/ cover;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
     header{
-        width:100%;
         height:100px;
         position: relative;
         z-index: 11;
     }
     
     nav{
-        width:100%;
-        height:100%;
         padding:0 100px 0;
         box-sizing: border-box;
         text-align: left;
-
     }
-    .logo{
+    header h1 .logo{
         float: left;
         width:200px;
         height: 100px;
-        background: url('img/logo.png') no-repeat left;
+        background: url('../img/logo.png') no-repeat left;
         background-size:contain;
     }
 
     nav > ul{  
-        display: inline-block;      
-        height:100%;           
+        display: inline-block;         
         line-height: 100px;
         box-sizing: border-box;
         margin-left:90px;
     }
     nav > ul > li{
-        list-style:none;
         float: left;
         margin-right:100px;
         transition: all .3s;
@@ -51,14 +39,11 @@
     }
 
     nav ul li a{
-        width:100%;
         position: relative;
         display: block;
-        text-decoration: none;
         color:#fff;
         font-size:1em;   
-        transition:all .3s;
-            
+        transition:all .3s;      
     }
     nav ul li a::after{
         content:'';
@@ -70,7 +55,6 @@
         left:100%;
         border-radius: 10px;
         transition:all 200ms ease;
-
     }
 
     nav ul li:hover  a::after{
@@ -93,37 +77,32 @@
     .main_search_box{
         float: right;
         width:160px;
-        
     }
     .main_search_box input[type="search"]{
         width:160px;
         height:40px;
         background:#fff;
         border:none;
-        outline: none;
         font-size:1em;
         padding:10px;
         padding-left:40px;
         box-sizing: border-box;
-        margin-top:25px;
-        
+        margin-top:25px;   
     }
     .main_icon{
         display: inline-block;
         width:35px;
         height:35px;
-        background:url('img/search.png') no-repeat center /contain;
+        background:url('../img/search.png') no-repeat center /contain;
         position:absolute;
         top:28px;
     }
     .bottom{
-
         position: fixed;
         bottom:0;
         width:100%;
         height:100px;
         padding:0 100px 0;
-        
         box-sizing: border-box;
         text-align: right;
     }
@@ -140,30 +119,25 @@
         margin-left:50px;
     }
     .bottom > ul >li{
-        list-style:none;
         float: left;
         margin-right: 40px;
-          
     }
     .sns{
-         width:40px;
+        width:40px;
         height:40px;
     }
     .twitter{
-        background:url('img/twitter_white.png')no-repeat center;
+        background:url('../img/twitter_white.png')no-repeat center;
     }
     .facebook{
-        background:url('img/facebook_white.png')no-repeat center;
+        background:url('../img/facebook_white.png')no-repeat center;
     }
     .insta{
-        background:url('img/insta_white.png')no-repeat center;
+        background:url('../img/insta_white.png')no-repeat center;
     }
     .bottom p{
         color:#fff;
     }
     .bottom > ul >li:nth-child(3){
         margin-right: 0;
-    }
-    .bottom > ul >li a{
-        text-decoration: none;
     }

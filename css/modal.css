@@ -71,12 +71,12 @@ z-index: 9999;
     margin: 0 10px 0 10px;
 }
 .modalclose {
-color: #fff;
-position: absolute;
-top:-3px;
-right:10px;
-float: right;
-font-size: 30px;
-font-weight: bold;
-cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top:-3px;
+    right:10px;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
