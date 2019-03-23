@@ -1,0 +1,74 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content {
+  width: 1280px;
+  height: 720px;
+  background-color: #fefefe;
+  margin: 5% auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 9999; }
+
+.modal-content2 {
+  width: 90%;
+  height: 90%;
+  background-color: #fefefe;
+  margin: 3% auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 9999; }
+
+.photo_sec {
+  width: 100%;
+  height: 90%; }
+
+.photo_info {
+  width: 100%;
+  height: 10%;
+  background: #fff;
+  border-radius: 25px 25px 0 0;
+  box-sizing: border-box; }
+
+.name_2 {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  margin-top: 10px; }
+
+.sub_2 {
+  width: 30%;
+  height: 50%;
+  margin: 0 auto; }
+
+.view_modal {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center; }
+
+.icon_modal {
+  float: left;
+  margin: 0 10px 0 10px; }
+
+.modalclose {
+  color: #fff;
+  position: absolute;
+  top: -3px;
+  right: 10px;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer; }
+
+/*# sourceMappingURL=modal.css.map */

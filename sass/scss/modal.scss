@@ -1,46 +1,41 @@
 .modal{
-display: none; 
-position: fixed; 
-z-index: 9999;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%; 
-overflow: auto; 
+    display: none; 
+    position: fixed; 
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
 
-background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.4);
 }
 
 
 .modal-content {
-width:1280px;
-height:720px;
-background-color: #fefefe;
-margin: 5% auto;
-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-
-position: relative;
-overflow: hidden;
-
-z-index: 9999;
+    width:1280px;
+    height:720px;
+    background-color: #fefefe;
+    margin: 5% auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
 }
 .modal-content2 {
-width:90%;
-height:90%;
-background-color: #fefefe;
-margin: 3% auto;
-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-
-position: relative;
-overflow: hidden;
-
-z-index: 9999;
+    width:90%;
+    height:90%;
+    background-color: #fefefe;
+    margin: 3% auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
 }
 
 .photo_sec{
     width:100%;
     height:90%;
-    
 }
 .photo_info{
     width:100%;
